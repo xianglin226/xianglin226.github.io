@@ -7,34 +7,40 @@
   <style>
     body {
       font-family: "Helvetica Neue", Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f9f9fc;
+      margin: 0;
+      padding: 0;
+      background: #f9fafc;
       color: #333;
       line-height: 1.6;
     }
     header {
       background: #004aad;
       color: white;
-      text-align: center;
       padding: 40px 20px;
-      position: relative;
+    }
+    .header-content {
+      display: flex;
+      align-items: center;
+      max-width: 1100px;
+      margin: 0 auto;
+      flex-wrap: wrap;
     }
     header img {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
+      width: 170px;
+      height: 170px;
       border-radius: 50%;
       border: 4px solid white;
+      object-fit: cover;
+      margin-right: 30px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      margin-bottom: 15px;
     }
     header h1 {
-      margin: 10px 0 5px;
-      font-size: 2.2rem;
+      margin: 0;
+      font-size: 2.5rem;
     }
     header p {
-      margin: 0;
-      font-size: 1.2rem;
+      margin: 10px 0 0;
+      font-size: 1.1rem;
       color: #dce6f5;
     }
     nav {
@@ -90,13 +96,20 @@
 </head>
 <body>
   <header>
-    <img src="profile.jpg" alt="Xiang Lin photo">
-    <h1>Xiang Lin</h1>
-    <p>Computational Biology • Deep Learning • Single-cell & Spatial Omics</p>
+    <div class="header-content">
+      <img src="profile.jpg" alt="Xiang Lin photo">
+      <div>
+        <h1>Xiang Lin</h1>
+        <p>Biomedical Information • Computational Biology • AI</p>
+        <p>Postdoctoral Researcher<br>
+        Harvard Medical School & MIT</p>
+      </div>
+    </div>
   </header>
 
   <nav>
     <a href="#about">About</a>
+    <a href="#research">Research</a>
     <a href="#projects">Projects</a>
     <a href="#publications">Publications</a>
     <a href="#contact">Contact</a>
@@ -106,10 +119,30 @@
     <section id="about">
       <h2>About</h2>
       <p>
-        I build AI methods for single-cell, spatial transcriptomics, and drug discovery. 
-        My research spans multimodal deep learning, probabilistic modeling, and benchmarking 
-        for perturbation analysis — with open-source code and reproducible results.
+        I develop <strong>AI models for denoising, processing, and analyzing single-cell multiomics and spatial transcriptomics data, as well as for advancing drug discovery</strong>. 
       </p>
+      <p>
+        Currently, I am a Postdoctoral Researcher jointly affiliated with 
+        <strong>Harvard Medical School</strong> and <strong>MIT</strong>. 
+        My long-term vision is to develop <strong>AI-driven platforms for precision medicine</strong>, 
+        combining advanced computational models with experimental technologies systems to accelerate therapeutic discovery. 
+      </p>
+      <p>
+        I am passionate about building <strong>community resources</strong> for single-cells omics and therapeutic discovery,
+        contributing to open-source projects, and collaborating across disciplines to push the frontier
+        of <em>computational biology</em> and <em>AI in medicine</em>.
+      </p>
+    </section>
+
+    <section id="research">
+      <h2>Research Interests</h2>
+      <ul>
+        <li>Single-cell and spatial transcriptomics analysis</li>
+        <li>Multimodal deep learning and generative models</li>
+        <li>AI methods for perturbation modeling and drug discovery</li>
+        <li>Benchmarking frameworks for reproducible bioinformatics</li>
+        <li>Integration of AI with experimental technologies (e.g., organ-on-a-chip)</li>
+      </ul>
     </section>
 
     <section id="projects">
@@ -126,13 +159,28 @@
 
     <section id="publications">
       <h2>Selected Publications</h2>
+        <p>
+        <strong>PDGrapher:</strong> Combinatorial prediction of therapeutic perturbations using causally-inspired neural networks. 
+        <em>Nature Biomedical Engineering, 2022</em> [<a href="https://www.biorxiv.org/content/10.1101/2024.01.03.573985v2" target="_blank">Paper</a>].
+      </p>
       <p>
         <strong>scMDC:</strong> Clustering of single-cell multi-omics data with multimodal deep learning. 
         <em>Nature Communications, 2022</em> [<a href="https://www.nature.com/articles/s41467-022-35031-9" target="_blank">Paper</a>].
       </p>
       <p>
         <strong>DSSC:</strong> Model-based constrained deep clustering for spatial/single-cell data. 
-        <em>Genome Research, 2022</em> [<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9712636/" target="_blank">Paper</a>].
+        <em>Genome Research, 2022</em> [<a href="https://genome.cshlp.org/content/32/10/1906.short" target="_blank">Paper</a>].
+      </p>
+      <p>
+        <strong>MultiSC:</strong> Deep learning pipeline for multi-omics NEAT-seq analysis. 
+        <em>Briefings in Bioinformatics, 2024</em> [<a href="https://academic.oup.com/bib/article/25/6/bbae492/7814652" target="_blank">Paper</a>].
+      </p>
+        <strong>scAL:</strong> An active learning approach for clustering single-cell RNA-seq data. 
+        <em>Lab. Invest., 2024</em> [<a href="https://www.nature.com/articles/s41374-021-00639-w" target="_blank">Paper</a>].
+      </p>
+      </p>
+        <strong>scDILT:</strong> scDILT: A Model-Based and Constrained Deep Learning Framework for Single-Cell Data Integration, Label Transferring, and Clustering. 
+        <em>TCBB, 2024</em> [<a href="https://ieeexplore.ieee.org/abstract/document/10932718" target="_blank">Paper</a>].
       </p>
     </section>
 
@@ -144,7 +192,7 @@
   </div>
 
   <footer>
-    © <span id="year"></span> Xiang Lin · Powered by GitHub Pages
+    © <span id="year"></span> Xiang Lin · Built with HTML/CSS · Hosted on GitHub Pages
   </footer>
 
   <script>
@@ -152,3 +200,4 @@
   </script>
 </body>
 </html>
+
